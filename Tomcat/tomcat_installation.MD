@@ -11,22 +11,26 @@
    cd /opt
    wget https://dlcdn.apache.org/tomcat/tomcat-8/v8.5.82/bin/apache-tomcat-8.5.82.tar.gz
    tar -xvzf /opt/apache-tomcat-<version>.tar.gz
-   ```
-1. give executing permissions to startup.sh and shutdown.sh which are under bin. 
-   ```sh
-   chmod +x /opt/apache-tomcat-<version>/bin/startup.sh 
-   chmod +x /opt/apache-tomcat-<version>/bin/shutdown.sh
-   ```
-   > Note: you may get below error while starting tomcat incase if you dont install Java   
-   `Neither the JAVA_HOME nor the JRE_HOME environment variable is defined At least one of these environment variable is needed to run this program`
-1. create link files for tomcat startup.sh and shutdown.sh 
-   ```sh
-   ln -s /opt/apache-tomcat-<version>/bin/startup.sh /usr/local/bin/tomcatup
-   ln -s /opt/apache-tomcat-<version>/bin/shutdown.sh /usr/local/bin/tomcatdown
+   ```mv apache-tomcat-8.5.72 tomcat8
+
+give executing permissions to startup.sh and shutdown.sh which are under bin.
+
+chmod +x /opt/tomcat8/bin/startup.sh
+chmod +x /opt/tomcat8/bin/shutdown.sh
+
+create link files for tomcat startup.sh and shutdown.sh
+
+ln -s /opt/tomcat8/bin/startup.sh /usr/local/bin/tomcatup
+ln -s /opt/tomcat8/bin/shutdown.sh /usr/local/bin/tomcatdown
+
    
    tomcatup
    tomcatdown
    
+   # tomcatup
+
+Check point:
+access tomcat application from browser on prot 8080
    ```
   #### Check point :
 access tomcat application from browser on port 8080  
